@@ -70,7 +70,15 @@
 						</goals>
 					</execution>
 					<execution>
+						<id>package-scaladocs</id>
 						<phase>package</phase>
+						<goals>
+							<goal>doc</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>publish-scaladocs</id>
+						<phase>site</phase>
 						<goals>
 							<goal>doc</goal>
 						</goals>
@@ -102,7 +110,15 @@
 						</goals>
 					</execution>
 					<execution>
+						<id>package-javadocs</id>
 						<phase>package</phase>
+						<goals>
+							<goal>javadoc</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>publish-javadocs</id>
+						<phase>site</phase>
 						<goals>
 							<goal>javadoc</goal>
 						</goals>
