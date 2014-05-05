@@ -4,7 +4,8 @@
 
  vim:ai noci noet nopi sts=8 sw=8 ts=8:
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.unix-junkie</groupId>
 	<artifactId>test-scala-mixed</artifactId>
@@ -75,14 +76,26 @@
 				<executions>
 					<execution>
 						<id>scala-compile</id>
-						<phase>process-resources</phase>
+
+						<!-- Scala compiled before Java -->
+						<!--phase>process-resources</phase-->
+
+						<!-- Scala compiled after Java -->
+						<phase>compile</phase>
+
 						<goals>
 							<goal>compile</goal>
 						</goals>
 					</execution>
 					<execution>
 						<id>scala-test-compile</id>
-						<phase>process-test-resources</phase>
+
+						<!-- Scala compiled before Java -->
+						<!--phase>process-test-resources</phase-->
+
+						<!-- Scala compiled after Java -->
+						<phase>test-compile</phase>
+
 						<goals>
 							<goal>testCompile</goal>
 						</goals>
