@@ -32,7 +32,7 @@
 		<project.build.sourceEncoding>US-ASCII</project.build.sourceEncoding>
 		<emacsMode>true</emacsMode>
 		<scala.version>2.11.12</scala.version>
-		<scala.plugin.version>4.3.0</scala.plugin.version>
+		<scala.plugin.version>4.5.3</scala.plugin.version>
 		<exec.mainClass>C1</exec.mainClass>
 	</properties>
 
